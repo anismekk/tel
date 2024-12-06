@@ -1,70 +1,23 @@
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #007bff;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #0056b3;
-}
-
-nav a.active {
-    background-color: #0056b3;
-}
-
-/* General Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #ffffff;
-}
-
-/* Content Styling */
-#content {
-    text-align: center;
-    padding: 20px;
-}
-
-.main-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.main-button:hover {
-    background-color: #0056b3;
-}
-
-/* Task Container */
+/* Task Section Styling */
 #task-container {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#task-container h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#task-container p {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 20px;
 }
 
 .task {
@@ -72,10 +25,9 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    padding: 10px 20px;
-    width: 90%;
-    max-width: 500px;
+    padding: 10px 15px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .task span {
@@ -84,11 +36,10 @@ body {
 }
 
 .start-button {
-    padding: 5px 10px;
-    font-size: 14px;
     background-color: #007bff;
     color: white;
     border: none;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
 }
