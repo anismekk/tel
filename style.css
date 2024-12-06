@@ -6,6 +6,13 @@ body {
     padding: 0;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 10px 0;
+}
+
 header button {
     background-color: #007bff;
     color: white;
@@ -17,23 +24,18 @@ header button {
     cursor: pointer;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    background-color: #222;
-    padding: 10px 0;
+header button:hover {
+    background-color: #0056b3;
 }
 
-.score-section {
+#content {
     text-align: center;
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .main-button {
-    display: block;
-    margin: 10px auto;
     background-color: #007bff;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -41,20 +43,29 @@ header {
     cursor: pointer;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 20px;
+.main-button:hover {
+    background-color: #0056b3;
+}
+
+#task-container {
+    margin: 20px;
+    padding: 10px;
 }
 
 .task {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 20px;
+    margin: 10px 0;
     padding: 10px;
     border: 1px solid #555;
     border-radius: 5px;
     background-color: #333;
+}
+
+.task p {
+    margin: 0;
+    font-size: 14px;
 }
 
 .task button {
@@ -64,4 +75,8 @@ h2 {
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+.task button:hover {
+    background-color: #0056b3;
 }
