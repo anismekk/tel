@@ -1,143 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-header {
+/* Navigation Bar */
+nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Ensures equal spacing between buttons */
     align-items: center;
-    padding: 10px 20px;
-    background-color: #111;
-    border-bottom: 1px solid #333;
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky; /* Keeps the nav bar at the top */
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-header .menu {
-    display: flex;
-    gap: 10px;
-}
-
-header .menu a {
-    color: #fff;
+/* Navigation Buttons */
+nav a {
     text-decoration: none;
-    font-size: 1rem;
-    padding: 5px 10px;
+    color: white;
+    font-size: 14px;
+    padding: 10px 15px;
     border-radius: 5px;
-}
-
-header .menu a:hover {
-    background-color: #333;
-}
-
-.container {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: #111;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1rem;
-    color: #aaa;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 10px 0;
     background-color: #007bff;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+nav a:hover {
     background-color: #0056b3;
 }
 
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.tabs button {
-    padding: 10px 20px;
-    background-color: #333;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    border-radius: 5px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.tabs button.active {
-    background-color: #007bff;
-}
-
-.tabs button:hover {
+nav a.active {
     background-color: #0056b3;
-}
-
-.task {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #222;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.task img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.task-details {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.task .start-button {
-    padding: 10px;
-    background-color: #28a745;
-    border: none;
-    color: #fff;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.task .start-button:hover {
-    background-color: #218838;
-}
-
-.task .timer {
-    font-size: 0.9rem;
-    color: #aaa;
 }
