@@ -9,12 +9,13 @@
 </head>
 <body>
     <header>
-        <h1>PAWS</h1>
-        <button onclick="showPage('home')">Home</button>
-        <button onclick="showPage('leaders')">Leaders</button>
-        <button onclick="showPage('vote')">Vote</button>
-        <button onclick="showPage('friends')">Friends</button>
-        <button onclick="showPage('earn')">Earn</button>
+        <nav>
+            <a href="#" onclick="showPage('home')" class="active">Home</a>
+            <a href="#" onclick="showPage('leaders')">Leaders</a>
+            <a href="#" onclick="showPage('vote')">Vote</a>
+            <a href="#" onclick="showPage('friends')">Friends</a>
+            <a href="#" onclick="showPage('earn')">Earn</a>
+        </nav>
     </header>
 
     <div id="content">
@@ -25,9 +26,9 @@
         </div>
         <button class="main-button">Join our community</button>
     </div>
+
+    <div id="task-container">
+        <!-- Tasks will be added here dynamically -->
+    </div>
 </body>
 </html>
-
-<div id="task-container">
-    <!-- Tasks will be added here dynamically -->
-</div>
