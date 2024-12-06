@@ -5,13 +5,26 @@ const pages = {
             <p>Complete tasks, earn rewards, and climb the leaderboard!</p>
         </div>
         <div id="telegram-login">
-            <script async src="https://telegram.org/js/telegram-widget.js?7"
+            <script async src="https://telegram.org/js/telegram-widget.js?22" 
                 data-telegram-login="whiskersofficial_bot" 
                 data-size="large" 
-                data-userpic="true"
-                data-radius="10"
-                data-auth-url="https://a9ea70d3-fd4b-4ff4-b535-c16f55062e29-00-3vpft4rty7deo.riker.replit.dev/telegram-auth"
+                data-userpic="false" 
+                data-onauth="onTelegramAuth(user)" 
                 data-request-access="write">
+            </script>
+            <script type="text/javascript">
+              function onTelegramAuth(user) {
+                alert('Logged in as ' + user.first_name + ' ' + user.last_name + 
+                      ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+                fetch('https://a9ea70d3-fd4b-4ff4-b535-c16f55062e29-00-3vpft4rty7deo.riker.replit.dev/telegram-auth', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(user)
+                })
+                .then(response => response.json())
+                .then(data => console.log(data.message))
+                .catch(error => console.error("Error:", error));
+              }
             </script>
         </div>
         <button class="main-button">Join our community</button>
