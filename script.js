@@ -4,6 +4,16 @@ const pages = {
             <h1>Welcome to Whiskers Mini App</h1>
             <p>Complete tasks, earn rewards, and climb the leaderboard!</p>
         </div>
+        <div id="telegram-login">
+            <script async src="https://telegram.org/js/telegram-widget.js?7"
+                data-telegram-login="whiskersofficial_bot" 
+                data-size="large" 
+                data-userpic="true"
+                data-radius="10"
+                data-auth-url="https://a9ea70d3-fd4b-4ff4-b535-c16f55062e29-00-3vpft4rty7deo.riker.replit.dev/telegram-auth"
+                data-request-access="write">
+            </script>
+        </div>
         <button class="main-button">Join our community</button>
     `,
     leaders: `
