@@ -3,62 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whiskers Mini App</title>
+    <title>Whiskers App</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="logo">Whiskers</div>
-        <nav>
-            <a href="#tasks">Tasks</a>
-            <a href="#leaderboard">Leaderboard</a>
-        </nav>
+        <div class="header-content">
+            <span class="app-title">WHISKERS</span>
+            <span class="verified">✔️</span>
+        </div>
+        <div class="header-subtitle">
+            <span>Check the footprint map</span>
+            <button class="icon-button">→</button>
+        </div>
     </header>
 
-    <main>
-        <!-- Welcome Section -->
-        <section id="welcome">
-            <h1>Welcome to Whiskers Mini App</h1>
-            <p>Complete tasks, earn rewards, and climb the leaderboard!</p>
-        </section>
-
-        <!-- Tasks Section -->
-        <section id="tasks" class="container">
-            <h2>Tasks</h2>
-            <div class="card">
-                <h3>Task 1</h3>
-                <p>Complete this task to earn 1 Whisker.</p>
-                <button onclick="completeTask(1)">Complete Task</button>
-            </div>
-            <div class="card">
-                <h3>Task 2</h3>
-                <p>Complete this task to earn 2 Whiskers.</p>
-                <button onclick="completeTask(2)">Complete Task</button>
-            </div>
-        </section>
-
-        <!-- Leaderboard Section -->
-        <section id="leaderboard" class="container">
-            <h2>Leaderboard</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>User</th>
-                        <th>Whiskers</th>
-                    </tr>
-                </thead>
-                <tbody id="leaderboard-data">
-                    <!-- Data will be populated dynamically -->
-                </tbody>
-            </table>
-        </section>
+    <!-- Main Content -->
+    <main id="content">
+        <!-- Content will be dynamically loaded here -->
     </main>
 
+    <!-- Footer Navigation -->
     <footer>
-        <p>&copy; 2024 Whiskers. All rights reserved.</p>
+        <div class="navigation">
+            <div class="nav-item active" onclick="navigateTo('home')">
+                <span>🏠</span>
+                <p>Home</p>
+            </div>
+            <div class="nav-item" onclick="navigateTo('leaders')">
+                <span>🏆</span>
+                <p>Leaders</p>
+            </div>
+            <div class="nav-item" onclick="navigateTo('vote')">
+                <span>✔️</span>
+                <p>Vote</p>
+            </div>
+            <div class="nav-item" onclick="navigateTo('friends')">
+                <span>👥</span>
+                <p>Friends</p>
+            </div>
+            <div class="nav-item" onclick="navigateTo('earn')">
+                <span>📋</span>
+                <p>Earn</p>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
