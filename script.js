@@ -1,9 +1,4 @@
 function completeTask(taskId) {
-    alert(`Task ${taskId} completed! You earned 1 Whisker.`);
-    // You can replace this alert with an API call to your backend.
-}
-
-function viewLeaderboard() {
-    alert("Leaderboard coming soon!");
-    // This can later be replaced with a dynamic leaderboard.
+    alert(`Task ${taskId} completed! You earned ${taskId} Whisker(s).`);
+    // Add backend API calls here to store task completion in a database.
 }
