@@ -1,10 +1,10 @@
-/* Fonts and Reset */
+/* Global Styles */
 body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #eef2ff);
+    color: #333;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f3f4f6, #e2efff);
-    color: #333;
 }
 
 header {
@@ -14,7 +14,6 @@ header {
     background: #007bff;
     color: white;
     padding: 15px 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -23,50 +22,41 @@ header .logo {
 }
 
 header nav a {
-    margin: 0 10px;
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    margin: 0 10px;
 }
 
 header nav a:hover {
     text-decoration: underline;
 }
 
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-#tasks, #leaderboard {
-    margin: 50px 0;
-}
-
 .container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 .card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 300px;
     text-align: center;
+    max-width: 300px;
 }
 
 button {
-    padding: 10px 20px;
     background: #28a745;
     color: white;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 1rem;
 }
 
 button:hover {
@@ -76,10 +66,10 @@ button:hover {
 table {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     border-collapse: collapse;
     background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 table th, table td {
@@ -89,8 +79,9 @@ table th, table td {
 }
 
 footer {
-    margin-top: 50px;
+    text-align: center;
     padding: 10px;
     background: #f1f1f1;
-    text-align: center;
+    color: #666;
+    margin-top: 30px;
 }
