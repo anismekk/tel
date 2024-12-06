@@ -49,3 +49,51 @@ function showPage(page) {
 document.addEventListener("DOMContentLoaded", () => {
     showPage("home");
 });
+
+// Task data (this can come from an API or backend later)
+const tasks = [
+    { id: 1, name: "Check Whiskers TG", reward: "+500 PAWS" },
+    { id: 2, name: "Check Whiskers X", reward: "+500 PAWS" },
+    { id: 3, name: "Get PAWSED", reward: "+10,000 PAWS" },
+];
+
+// Function to display tasks
+function displayTasks() {
+    const taskContainer = document.getElementById("task-container");
+
+    tasks.forEach((task) => {
+        // Create a task element
+        const taskElement = document.createElement("div");
+        taskElement.classList.add("task");
+
+        // Add task details
+        taskElement.innerHTML = `
+            <p>${task.name}</p>
+            <p>${task.reward}</p>
+            <button onclick="completeTask('${task.name}')">Start</button>
+        `;
+
+        // Append to container
+        taskContainer.appendChild(taskElement);
+    });
+}
+
+// Call the function on page load
+document.addEventListener("DOMContentLoaded", displayTasks);
+
+// Function to handle task completion
+function completeTask(task) {
+    fetch('https://<your-replit-url>.repl.co/complete-task', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            task: task,
+            user_id: '123456789'  // Replace with the actual Telegram user ID
+        })
+    })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => console.error('Error:', error));
+}
