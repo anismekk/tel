@@ -33,16 +33,16 @@ const pages = {
     earn: `
         <h1>Tasks</h1>
         <p>Get rewards for completing quests</p>
-        <div class="task-list">
-            <p>Task 1: +500 PAWS</p>
-            <p>Task 2: +500 PAWS</p>
-        </div>
+        <div id="task-container"></div>
     `
 };
 
 function showPage(page) {
     const content = document.getElementById("content");
     content.innerHTML = pages[page];
+    if (page === "earn") {
+        displayTasks(); // Load tasks dynamically when "earn" page is shown
+    }
 }
 
 // Default to home page on load
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showPage("home");
 });
 
-// Task data (this can come from an API or backend later)
+// Task data
 const tasks = [
     { id: 1, name: "Check Whiskers TG", reward: "+500 PAWS" },
     { id: 2, name: "Check Whiskers X", reward: "+500 PAWS" },
@@ -78,22 +78,19 @@ function displayTasks() {
     });
 }
 
-// Call the function on page load
-document.addEventListener("DOMContentLoaded", displayTasks);
-
 // Function to handle task completion
 function completeTask(task) {
-    fetch('https://<your-replit-url>.repl.co/complete-task', {
+    fetch('https://096ebbcd-26f8-4ca3-9d45-0665ed143030-00-1oe5s65v54r3y.worf.replit.dev/complete-task', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             task: task,
-            user_id: '123456789'  // Replace with the actual Telegram user ID
+            user_id: '1215402413' // Your Telegram User ID
         })
     })
     .then(response => response.json())
     .then(data => alert(data.message))
-    .catch(error => console.error('Error:', error));
+    .catch(error => console.error("Error:", error));
 }
