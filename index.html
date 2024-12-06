@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whiskers Mini-App</title>
+    <title>Whiskers Mini App</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,11 +15,15 @@
             <a href="#leaderboard">Leaderboard</a>
         </nav>
     </header>
+
     <main>
+        <!-- Welcome Section -->
         <section id="welcome">
-            <h1>Welcome to Whiskers Mini-App</h1>
+            <h1>Welcome to Whiskers Mini App</h1>
             <p>Complete tasks, earn rewards, and climb the leaderboard!</p>
         </section>
+
+        <!-- Tasks Section -->
         <section id="tasks" class="container">
             <h2>Tasks</h2>
             <div class="card">
@@ -33,6 +37,8 @@
                 <button onclick="completeTask(2)">Complete Task</button>
             </div>
         </section>
+
+        <!-- Leaderboard Section -->
         <section id="leaderboard" class="container">
             <h2>Leaderboard</h2>
             <table>
@@ -43,21 +49,13 @@
                         <th>Whiskers</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jane Smith</td>
-                        <td>20</td>
-                    </tr>
+                <tbody id="leaderboard-data">
+                    <!-- Data will be populated dynamically -->
                 </tbody>
             </table>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Whiskers. All rights reserved.</p>
     </footer>
