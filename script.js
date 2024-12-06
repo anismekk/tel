@@ -1,3 +1,5 @@
+const content = document.getElementById("content");
+
 const pages = {
     home: `
         <div class="score-section">
@@ -39,7 +41,6 @@ const pages = {
             <button class="tab" onclick="switchTab('partners')">Partners</button>
         </div>
         <div id="task-content">
-            <!-- Default content for Limited tab -->
             <div class="task">
                 <div class="task-details">
                     <img src="telegram-icon.png" alt="Telegram">
@@ -58,20 +59,11 @@ const pages = {
                 <button class="start-button">Start</button>
                 <span class="timer">13:21:50</span>
             </div>
-            <div class="task">
-                <div class="task-details">
-                    <img src="paw-icon.png" alt="Get Pawsed">
-                    <span>Get Pawsed</span>
-                    <p>+ 10,000 PAWS</p>
-                </div>
-                <button class="claim-button">Claim</button>
-                <p>10M / 10M</p>
-            </div>
         </div>
     `,
 };
 
-// Function to load the default tab
+// Function to handle tab switching
 function switchTab(tab) {
     const taskContent = document.getElementById("task-content");
     if (tab === "limited") {
@@ -101,5 +93,4 @@ function switchTab(tab) {
         taskContent.innerHTML = `<p>Partners' tasks coming soon!</p>`;
     }
     document.querySelectorAll(".tab").forEach((btn) => btn.classList.remove("active"));
-    document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add("active");
-}
+    document.querySelector(`.tab[onclick="switchTab('${tab}')
