@@ -1,5 +1,3 @@
-const content = document.getElementById("content");
-
 const pages = {
     home: `
         <div class="score-section">
@@ -35,50 +33,19 @@ const pages = {
     earn: `
         <h1>Tasks</h1>
         <p>Get rewards for completing quests</p>
-        <div class="tabs">
-            <button class="tab active" onclick="switchTab('limited')">Limited (2)</button>
-            <button class="tab" onclick="switchTab('in-game')">In-game (2)</button>
-            <button class="tab" onclick="switchTab('partners')">Partners</button>
+        <div class="task-list">
+            <p>Task 1: +500 PAWS</p>
+            <p>Task 2: +500 PAWS</p>
         </div>
-        <div id="task-content">
-            <div class="task">
-                <div class="task-details">
-                    <img src="telegram-icon.png" alt="Telegram">
-                    <span>Check Whiskers TG</span>
-                    <p>+ 500 PAWS</p>
-                </div>
-                <button class="start-button">Start</button>
-                <span class="timer">13:21:50</span>
-            </div>
-        </div>
-    `,
+    `
 };
 
 function showPage(page) {
-    if (pages[page]) {
-        content.innerHTML = pages[page];
-    }
+    const content = document.getElementById("content");
+    content.innerHTML = pages[page];
 }
 
-function switchTab(tab) {
-    const taskContent = document.getElementById("task-content");
-    if (tab === "limited") {
-        taskContent.innerHTML = `
-            <div class="task">
-                <div class="task-details">
-                    <img src="telegram-icon.png" alt="Telegram">
-                    <span>Check Whiskers TG</span>
-                    <p>+ 500 PAWS</p>
-                </div>
-                <button class="start-button">Start</button>
-                <span class="timer">13:21:50</span>
-            </div>
-        `;
-    } else if (tab === "in-game") {
-        taskContent.innerHTML = `<p>In-game tasks coming soon!</p>`;
-    } else {
-        taskContent.innerHTML = `<p>Partners' tasks coming soon!</p>`;
-    }
-    document.querySelectorAll(".tab").forEach((btn) => btn.classList.remove("active"));
-    document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add("active");
-}
+// Default to home page on load
+document.addEventListener("DOMContentLoaded", () => {
+    showPage("home");
+});
