@@ -94,3 +94,24 @@ function switchTab(tab) {
     }
     document.querySelectorAll(".tab").forEach((btn) => btn.classList.remove("active"));
     document.querySelector(`.tab[onclick="switchTab('${tab}')
+
+function completeTask(task) {
+    fetch('https://<your-replit-url>.repl.co/complete-task', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            task: task,
+            user_id: '123456789'  // Replace with the actual Telegram user ID
+        })
+    })
+    .then(response => response.json())
+    .then(data => alert(data.message))
+    .catch(error => console.error('Error:', error));
+}
+
+// Example usage on a button click
+document.getElementById('task-button').addEventListener('click', () => {
+    completeTask('Check Whiskers TG');
+});
