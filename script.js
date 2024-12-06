@@ -47,23 +47,19 @@ const pages = {
                     <span>Check Whiskers TG</span>
                     <p>+ 500 PAWS</p>
                 </div>
-                <button class="start-button" onclick="completeTask('Check Whiskers TG')">Start</button>
-                <span class="timer">13:21:50</span>
-            </div>
-            <div class="task">
-                <div class="task-details">
-                    <img src="x-icon.png" alt="X">
-                    <span>Check Whiskers X</span>
-                    <p>+ 500 PAWS</p>
-                </div>
-                <button class="start-button" onclick="completeTask('Check Whiskers X')">Start</button>
+                <button class="start-button">Start</button>
                 <span class="timer">13:21:50</span>
             </div>
         </div>
     `,
 };
 
-// Function to handle tab switching
+function showPage(page) {
+    if (pages[page]) {
+        content.innerHTML = pages[page];
+    }
+}
+
 function switchTab(tab) {
     const taskContent = document.getElementById("task-content");
     if (tab === "limited") {
@@ -74,16 +70,7 @@ function switchTab(tab) {
                     <span>Check Whiskers TG</span>
                     <p>+ 500 PAWS</p>
                 </div>
-                <button class="start-button" onclick="completeTask('Check Whiskers TG')">Start</button>
-                <span class="timer">13:21:50</span>
-            </div>
-            <div class="task">
-                <div class="task-details">
-                    <img src="x-icon.png" alt="X">
-                    <span>Check Whiskers X</span>
-                    <p>+ 500 PAWS</p>
-                </div>
-                <button class="start-button" onclick="completeTask('Check Whiskers X')">Start</button>
+                <button class="start-button">Start</button>
                 <span class="timer">13:21:50</span>
             </div>
         `;
@@ -94,21 +81,4 @@ function switchTab(tab) {
     }
     document.querySelectorAll(".tab").forEach((btn) => btn.classList.remove("active"));
     document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add("active");
-}
-
-// Function to send task completion to Replit server
-function completeTask(task) {
-    fetch('https://096ebbcd-26f8-4ca3-9d45-0665ed143030-00-1oe5s65v54r3y.worf.replit.dev/complete-task', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            task: task,
-            user_id: '123456789', // Replace with the actual Telegram user ID
-        }),
-    })
-        .then((response) => response.json())
-        .then((data) => alert(data.message))
-        .catch((error) => console.error('Error:', error));
 }
