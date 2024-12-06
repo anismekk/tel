@@ -1,3 +1,84 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.verified {
+    margin-left: 10px;
+    color: #00aaff;
+}
+
+.header-subtitle {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.icon-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* Footer Navigation */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.nav-item {
+    color: #666;
+    font-size: 0.8rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-item span {
+    font-size: 1.2rem;
+}
+
+.nav-item.active {
+    color: #007bff;
+}
+
+.nav-item p {
+    margin-top: 5px;
+}
+
 /* Task Tabs */
 .tabs {
     display: flex;
