@@ -80,7 +80,7 @@ function displayTasks() {
 
 // Function to handle task completion
 function completeTask(task) {
-    fetch('https://096ebbcd-26f8-4ca3-9d45-0665ed143030-00-1oe5s65v54r3y.worf.replit.dev/complete-task', {
+    fetch('https://a9ea70d3-fd4b-4ff4-b535-c16f55062e29-00-3vpft4rty7deo.riker.replit.dev/complete-task', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
