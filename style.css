@@ -1,16 +1,15 @@
 /* Navigation Bar */
 nav {
     display: flex;
-    justify-content: space-around; /* Ensures equal spacing between buttons */
+    justify-content: space-around;
     align-items: center;
     background-color: #333;
     padding: 10px 0;
-    position: sticky; /* Keeps the nav bar at the top */
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Navigation Buttons */
 nav a {
     text-decoration: none;
     color: white;
@@ -26,5 +25,35 @@ nav a:hover {
 }
 
 nav a.active {
+    background-color: #0056b3;
+}
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Content Styling */
+#content {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-button:hover {
     background-color: #0056b3;
 }
